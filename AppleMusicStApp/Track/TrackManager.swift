@@ -34,8 +34,11 @@ class TrackManager {
     
     // TODO: 인덱스에 맞는 트랙 로드하기
     func track(at index: Int) -> Track? {
-//        우리는 cell을 어떻게 표현할지를 결정할 때 해당 indexPath의 아이템번째를 판단하여 해당 트랙을 반환해야 할 것이다.
-        return nil
+        // 우리는 cell을 어떻게 표현할지를 결정할 때 해당 indexPath의 아이템번째를 판단하여 해당 트랙을 반환해야 할 것이다.
+        let playerItem = tracks[index]
+        // 현재 playerItem의 type은 AVPlayerItem이다. 이를 Track type으로 casting해야한다.
+        let track = playerItem.convertToTrack()
+        return track
     }
 
     // TODO: 앨범 로딩메소드 구현

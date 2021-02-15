@@ -38,6 +38,7 @@
 		3D6AFDBE25D927F700631C5D /* night calls.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3D6AFDA825D927F700631C5D /* night calls.mp3 */; };
 		3D6AFDC125D92F4A00631C5D /* TrackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFDC025D92F4A00631C5D /* TrackManager.swift */; };
 		3D6AFDC425D92FAA00631C5D /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFDC325D92FAA00631C5D /* Track.swift */; };
+		3D941BEA25DA9F4A00D409C8 /* Extension+AVPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D941BE925DA9F4A00D409C8 /* Extension+AVPlayerItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		3D6AFDA825D927F700631C5D /* night calls.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "night calls.mp3"; path = "../../../올인원패키지-ios앱개발-강의자료/CH12 애플뮤직st 음악앱/starter/AppleMusicStApp/AppleMusicStApp/Resources/night calls.mp3"; sourceTree = "<group>"; };
 		3D6AFDC025D92F4A00631C5D /* TrackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackManager.swift; sourceTree = "<group>"; };
 		3D6AFDC325D92FAA00631C5D /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		3D941BE925DA9F4A00D409C8 /* Extension+AVPlayerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+AVPlayerItem.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			children = (
 				3D6AFDC025D92F4A00631C5D /* TrackManager.swift */,
 				3D6AFDC325D92FAA00631C5D /* Track.swift */,
+				3D941BE925DA9F4A00D409C8 /* Extension+AVPlayerItem.swift */,
 			);
 			path = Track;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D941BEA25DA9F4A00D409C8 /* Extension+AVPlayerItem.swift in Sources */,
 				3D6AFD9125D9217E00631C5D /* TrackCollectionViewCell.swift in Sources */,
 				3D6AFDC425D92FAA00631C5D /* Track.swift in Sources */,
 				3D17C9BD25D91BE9008CF92C /* AppDelegate.swift in Sources */,
