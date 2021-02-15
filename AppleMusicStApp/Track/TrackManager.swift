@@ -25,7 +25,11 @@ class TrackManager {
     // TODO: 트랙 로드하기
     func loadTrack() -> [AVPlayerItem] {
         // 파일을 읽어서 AVPlayerItem
-        return []
+        let urls = Bundle.main.urls(forResourcesWithExtension: "mp3", subdirectory: nil) ?? []
+        let items = urls.map { url in
+            return AVPlayerItem(url: url)
+        }
+        return items
     }
     
     // TODO: 인덱스에 맞는 트랙 로드하기
