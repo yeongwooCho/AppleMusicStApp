@@ -43,12 +43,24 @@ class TrackManager {
 
     // TODO: 앨범 로딩메소드 구현
     func loadAlbums(tracks: [AVPlayerItem]) -> [Album]{
-        []
+        let trackList: [Track] = tracks.compactMap { track in
+            track.convertToTrack()
+        }
+        let albumDics = Dictionary(grouping: trackList) { (track)  in
+            track.albumName
+        }
+        var albums: [Album] = []
+        for (key, value) in albumDics {
+            let title = key
+            let tracks = value
+            let album = Album(title: title, tracks: tracks)
+            albums.append(album)
+        }
+        return albums
     }
     
     // TODO: 오늘의 트랙 랜덤으로 선택
     func loadOtherTodaysTrack() {
-        
+        self.todayMusic = self.tracks.randomElement()
     }
-    
 }
