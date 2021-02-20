@@ -41,7 +41,25 @@ extension HomeViewController: UICollectionViewDataSource {
     // headerView를 어떻게 표시할 것인가?
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         // TODO: 헤더 구성하기
-        return UICollectionReusableView()
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            guard let item = trackManager.todayMusic else {
+                return UICollectionReusableView()
+            }
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "TrackCollectionHeaderView", for: indexPath) as? TrackCollectionHeaderView else {
+                return UICollectionReusableView()
+            }
+            
+            header.update(with: item)
+            header.tapHandler = { item -> Void in
+                // TODO: 탭이 되었을 때 플레이어를 띄운다.
+                // 아직 우리는 Player을 구현하지 않았기에 적절한 출력만 내보도록 한다.
+                print("----> item title : \(item.convertToTrack()?.title)")
+            }
+            return header
+        default:
+            return UICollectionReusableView()
+        }
     }
 }
 
