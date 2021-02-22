@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0A2B0625E3C84100432FE8 /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0A2B0525E3C84100432FE8 /* Player.storyboard */; };
+		3D0A2B0925E3D2C900432FE8 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A2B0825E3D2C900432FE8 /* PlayerViewController.swift */; };
+		3D0A2B0C25E3DAA400432FE8 /* SimplePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A2B0B25E3DAA400432FE8 /* SimplePlayer.swift */; };
 		3D17C9BD25D91BE9008CF92C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17C9BC25D91BE9008CF92C /* AppDelegate.swift */; };
 		3D17C9BF25D91BE9008CF92C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17C9BE25D91BE9008CF92C /* SceneDelegate.swift */; };
 		3D17C9C425D91BE9008CF92C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D17C9C225D91BE9008CF92C /* Main.storyboard */; };
@@ -43,6 +46,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D0A2B0525E3C84100432FE8 /* Player.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Player.storyboard; sourceTree = "<group>"; };
+		3D0A2B0825E3D2C900432FE8 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		3D0A2B0B25E3DAA400432FE8 /* SimplePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePlayer.swift; sourceTree = "<group>"; };
 		3D17C9B925D91BE9008CF92C /* AppleMusicStApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleMusicStApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D17C9BC25D91BE9008CF92C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D17C9BE25D91BE9008CF92C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +144,9 @@
 		3D6AFD8725D91D8700631C5D /* Player */ = {
 			isa = PBXGroup;
 			children = (
+				3D0A2B0525E3C84100432FE8 /* Player.storyboard */,
+				3D0A2B0825E3D2C900432FE8 /* PlayerViewController.swift */,
+				3D0A2B0B25E3DAA400432FE8 /* SimplePlayer.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -250,6 +259,7 @@
 				3D6AFDB425D927F700631C5D /* elijah who - hello.mp3 in Resources */,
 				3D6AFDBE25D927F700631C5D /* night calls.mp3 in Resources */,
 				3D6AFDB925D927F700631C5D /* Moonlight!.mp3 in Resources */,
+				3D0A2B0625E3C84100432FE8 /* Player.storyboard in Resources */,
 				3D17C9C925D91BEA008CF92C /* LaunchScreen.storyboard in Resources */,
 				3D6AFDB025D927F700631C5D /* Letting Go.mp3 in Resources */,
 				3D6AFDAF25D927F700631C5D /* [ asleep ].mp3 in Resources */,
@@ -284,7 +294,9 @@
 				3D6AFD9125D9217E00631C5D /* TrackCollectionViewCell.swift in Sources */,
 				3D6AFDC425D92FAA00631C5D /* Track.swift in Sources */,
 				3D17C9BD25D91BE9008CF92C /* AppDelegate.swift in Sources */,
+				3D0A2B0C25E3DAA400432FE8 /* SimplePlayer.swift in Sources */,
 				3D6AFDC125D92F4A00631C5D /* TrackManager.swift in Sources */,
+				3D0A2B0925E3D2C900432FE8 /* PlayerViewController.swift in Sources */,
 				3D17C9BF25D91BE9008CF92C /* SceneDelegate.swift in Sources */,
 				3D6AFD8E25D91E7A00631C5D /* HomeViewController.swift in Sources */,
 				3D7ABA3625DF7E5300AA81E6 /* TrackCollectionHeaderView.swift in Sources */,
