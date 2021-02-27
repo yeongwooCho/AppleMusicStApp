@@ -53,8 +53,13 @@ extension HomeViewController: UICollectionViewDataSource {
             header.update(with: item)
             header.tapHandler = { item -> Void in
                 // TODO: 탭이 되었을 때 플레이어를 띄운다.
-                // 아직 우리는 Player을 구현하지 않았기에 적절한 출력만 내보도록 한다.
-                print("----> item title : \(item.convertToTrack()?.title)")
+                let playStoryboard = UIStoryboard.init(name: "Player", bundle: nil)
+                guard let playerVC = playStoryboard.instantiateViewController(identifier: "PlayerViewController") as? PlayerViewController else {
+                    return
+                }
+                playerVC.simplePlayer.replaceCurrentItem(with: item)
+                self.present(playerVC, animated: true, completion: nil)
+//                print("----> item title : \(item.convertToTrack()?.title)")
             }
             return header
         default:
@@ -67,7 +72,13 @@ extension HomeViewController: UICollectionViewDelegate {
     // 셀을 클릭했을때 어떤 action을 취할까?
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // TODO: 곡 클릭시 플레이어뷰 띄우기
-        print("--> \(indexPath.item)")
+        let playStoryboard = UIStoryboard.init(name: "Player", bundle: nil)
+        guard let playerVC = playStoryboard.instantiateViewController(identifier: "PlayerViewController") as? PlayerViewController else {
+            return
+        }
+        let item = trackManager.tracks[indexPath.item]
+        playerVC.simplePlayer.replaceCurrentItem(with: item)
+        present(playerVC, animated: true, completion: nil)
     }
 }
 

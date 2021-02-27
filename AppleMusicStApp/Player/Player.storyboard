@@ -11,7 +11,7 @@
         <!--Player View Controller-->
         <scene sceneID="N7J-T1-qew">
             <objects>
-                <viewController id="b5x-XT-vpG" customClass="PlayerViewController" customModule="AppleMusicStApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayerViewController" id="b5x-XT-vpG" customClass="PlayerViewController" customModule="AppleMusicStApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R1z-kM-vSV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,6 +37,11 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SNp-k4-E0X">
                                 <rect key="frame" x="18" y="690" width="378" height="31"/>
+                                <connections>
+                                    <action selector="beginDrag:" destination="b5x-XT-vpG" eventType="editingDidBegin" id="5CB-X4-ypK"/>
+                                    <action selector="endDrag:" destination="b5x-XT-vpG" eventType="editingDidEnd" id="xfa-Vx-obl"/>
+                                    <action selector="seek:" destination="b5x-XT-vpG" eventType="valueChanged" id="QGR-zx-0PY"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNz-6Z-IOq">
                                 <rect key="frame" x="179.5" y="765" width="55" height="55"/>
@@ -47,6 +52,9 @@
                                 <state key="normal" image="play.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
                                 </state>
+                                <connections>
+                                    <action selector="togglePlayButton:" destination="b5x-XT-vpG" eventType="touchUpInside" id="6gK-ac-oDv"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUm-uA-wum">
                                 <rect key="frame" x="20" y="730" width="39" height="17"/>
@@ -86,7 +94,7 @@
                         <outlet property="currentTimeLabel" destination="wUm-uA-wum" id="KX6-aQ-jdF"/>
                         <outlet property="playControlButton" destination="cNz-6Z-IOq" id="4UO-j5-XxT"/>
                         <outlet property="thumbnailImageView" destination="A6I-JG-L7J" id="UKS-R5-9bn"/>
-                        <outlet property="tileSlider" destination="SNp-k4-E0X" id="dJt-Yv-7oO"/>
+                        <outlet property="timeSlider" destination="SNp-k4-E0X" id="wYe-jS-obY"/>
                         <outlet property="titleLabel" destination="nAK-cI-vNa" id="fCE-Xj-ZOp"/>
                         <outlet property="totalDurationLabel" destination="SSo-uM-CVW" id="o6v-1G-6u6"/>
                     </connections>
