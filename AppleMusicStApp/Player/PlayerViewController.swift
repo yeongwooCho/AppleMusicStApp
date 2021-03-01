@@ -48,6 +48,8 @@ class PlayerViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         // TODO: 뷰나갈때 처리 > 심플플레이어
+        simplePlayer.pause()
+        simplePlayer.replaceCurrentItem(with: nil)
     }
     
     @IBAction func beginDrag(_ sender: UISlider) {
@@ -86,8 +88,8 @@ extension PlayerViewController {
     }
     
     func updateTintColor() {
-//        playControlButton.tintColor
-//        timeSlider.tintColor
+//        playControlButton.tintColor = DefaultStyle.Color.tint
+//        timeSlider.tintColor = DefaultStyle.Color.tint
     }
     
     func updateTime(time: CMTime) {
