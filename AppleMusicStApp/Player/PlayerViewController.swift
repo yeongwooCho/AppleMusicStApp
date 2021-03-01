@@ -88,8 +88,8 @@ extension PlayerViewController {
     }
     
     func updateTintColor() {
-//        playControlButton.tintColor = DefaultStyle.Color.tint
-//        timeSlider.tintColor = DefaultStyle.Color.tint
+        playControlButton.tintColor = DefaultStyle.Colors.tint
+        timeSlider.tintColor = DefaultStyle.Colors.tint
     }
     
     func updateTime(time: CMTime) {
