@@ -58,6 +58,11 @@ class PlayerViewController: UIViewController {
     }
     @IBAction func seek(_ sender: UISlider) {
         // TODO: 시킹 구현
+        guard let currentItem = simplePlayer.currentItem else {return}
+        let position = Double(sender.value)
+        let seconds = position * currentItem.duration.seconds
+        let time = CMTime(seconds: seconds, preferredTimescale: 100)
+        simplePlayer.seek(to: time)
     }
     @IBAction func togglePlayButton(_ sender: UIButton) {
         // TODO: 플레이버튼 toggle 구현
@@ -96,6 +101,7 @@ extension PlayerViewController {
         if isSeeking == false {
             // 노래 들으면서 시킹하면 자꾸 업데이트 됨. 따라서 시킹이 아닐때만 슬라이더 업데이트하자
             // TODO: 슬라이더 정보 업데이트
+            timeSlider.value = Float(simplePlayer.currentTime/simplePlayer.totalDurationTime)
         }
     }
     
