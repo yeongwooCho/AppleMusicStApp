@@ -5,14 +5,14 @@ AVPlayer를 활용한 음악 어플리케이션
 **학습한 내용**
 
 1. Dark Mode
-  + Pretty mod provided in ios13 and above
+    + Pretty mod provided in ios13 and above
 
 
 2. AVPlayer
-  + AVFoundation: Media Framework
-  + AVPlayer: player
-  + AVPlayerItem: Object for player
-  + Singleton Object: Similar to the declaration of a global variable, it is an object that can be called anywhere.
+   + AVFoundation: Media Framework
+   + AVPlayer: player
+   + AVPlayerItem: Object for player
+   + Singleton Object: Similar to the declaration of a global variable, it is an object that can be called anywhere.
   + present: Data can be moved without segues.
   + Slider Control: Update the Slider by observing the periodic time using 'addPeriodicTimeObserver'
   + Seeking: Control the player by changing the slider's value.
