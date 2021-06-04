@@ -6,7 +6,8 @@ AVPlayer를 활용한 음악 어플리케이션
 
 + Dark Mode
   - Pretty mod provided in ios13 and above
-'''
+
+"""
 import UIKit
 
 public enum DefaultStyle {
@@ -27,7 +28,7 @@ public enum DefaultStyle {
     }
 }
 
-'''
+"""
 
 + AVPlayer
   - AVFoundation: Media Framework
