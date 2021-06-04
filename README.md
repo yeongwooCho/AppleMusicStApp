@@ -4,11 +4,11 @@ AVPlayer를 활용한 음악 어플리케이션
 
 **학습한 내용**
 
-1. Dark Mode
++ Dark Mode
   - Pretty mod provided in ios13 and above
 
 
-2. AVPlayer
++ AVPlayer
   - AVFoundation: Media Framework
   - AVPlayer: player
   - AVPlayerItem: Object for player
@@ -17,10 +17,10 @@ AVPlayer를 활용한 음악 어플리케이션
   - Slider Control: Update the Slider by observing the periodic time using 'addPeriodicTimeObserver'
   - Seeking: Control the player by changing the slider's value.
 
-3. MVVM Design Patten (Model - View - ViewModel)
++ MVVM Design Patten (Model - View - ViewModel)
   - Implement Track, TrackManager, TrackViewModel for viewModel
 
-4. CollectionView
++ CollectionView
   - custom cell, dequeueReusableCell
   - CollectionViewDataSource: How to represent cell?
   - CollectionViewDelegate: What do you do when a cell is clicked?
