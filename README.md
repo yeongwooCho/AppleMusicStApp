@@ -6,7 +6,28 @@ AVPlayer를 활용한 음악 어플리케이션
 
 + Dark Mode
   - Pretty mod provided in ios13 and above
+'''
+import UIKit
 
+public enum DefaultStyle {
+    public enum Colors {
+        public static let tint: UIColor = {
+            if #available(iOS 13.0, *) {
+                return UIColor { traitCollection in
+                    if traitCollection.userInterfaceStyle == .dark {
+                        return .white
+                    } else {
+                        return .black
+                    }
+                }
+            } else {
+                return .black
+            }
+        }()
+    }
+}
+
+'''
 
 + AVPlayer
   - AVFoundation: Media Framework
